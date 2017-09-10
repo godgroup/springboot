@@ -1,6 +1,6 @@
 package com.hl.bootssm.dao;
 
-import com.demo.bootssm.domain.UserInfo;
+import com.hl.bootssm.domain.UserInfo;
 
 public interface IUserDao {
 	/**
