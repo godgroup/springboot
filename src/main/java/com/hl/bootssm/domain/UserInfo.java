@@ -1,32 +1,18 @@
 package com.hl.bootssm.domain;
 
-public class UserInfo {
-	private Integer id;
-	private String userName;
-	private String password;
-	private Integer roleId;
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public String getUserName() {
-		return userName;
-	}
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public Integer getRoleId() {
-		return roleId;
-	}
-	public void setRoleId(Integer roleId) {
-		this.roleId = roleId;
-	}
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+/**
+ * @author Static
+ */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserInfo extends BaseInfo {
+    private Integer id;
+    private String userName;
+    private String password;
+    private Integer roleId;
 }
