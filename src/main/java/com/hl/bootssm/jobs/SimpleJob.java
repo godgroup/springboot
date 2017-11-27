@@ -18,8 +18,6 @@ import java.util.Date;
 public class SimpleJob extends BaseJob {
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        if (!isProduct()) {
-            System.out.println("当前时间:" + new Date());
-        }
+        System.out.println("定时任务,当前时间:" + new Date());
     }
 }
