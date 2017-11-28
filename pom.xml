@@ -4,7 +4,7 @@
 
     <groupId>com.demo.bootssm</groupId>
     <artifactId>bootssm</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <parent>
@@ -78,4 +78,28 @@
             <version>${quartz.version}</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.4.7.RELEASE</version>
+                <configuration>
+                    <mainClass>com.hl.bootssm.Application</mainClass>
+                    <addResources>true</addResources>
+                    <embeddedLaunchScriptProperties>
+                    </embeddedLaunchScriptProperties>
+                    <executable>true</executable>
+                    <fork>true</fork>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

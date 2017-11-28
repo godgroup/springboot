@@ -1,3 +1,3 @@
 mvn clean install -Dmaven.test.skip=true package
-nohup java -jar capital-flow-0.0.1-SNAPSHOT.jar --spring.profiles.active=test > apiout.out &
+nohup java -jar bootssm-1.0.0.jar --spring.profiles.active=test > apiout.out &
 git branch
