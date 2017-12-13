@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<header>
+    <th:block layout:fragment="links">
+        <link th:href="@{/assets/toastr-master/build/toastr.min.css}" rel="stylesheet">
+        <link th:href="@{/js/lib/Validform_v5.3.2/css/style.css}" rel="stylesheet">
+    </th:block>
+</header>
+<body>
+<div layout:fragment="main-content">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+                <span th:text="${operType} eq 'addJob' ? '添加任务' : '修改任务'"></span>
+            </header>
+            <div class="panel-body">
+                <form id="scheduleForm" class="form-horizontal" role="form" action="/schedule/saveTask"
+                      th:method="post">
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">任务类名（必须继承Job接口）<span style="color: red">*</span></label>
+                        <div class="col-lg-3 ">
+                            <input type="text" id="jobClass" name="jobClass" style="width: 400px;"
+                                   th:value="${jobClass}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">cron表达式<span style="color: red">*</span></label>
+                        <div class="col-lg-3 ">
+                            <input type="text" id="cron" name="cron" th:value="${cron}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                            <a class="btn btn-danger" onclick="save()">保存</a>
+                            <a class="btn btn-danger" href="/schedule/index">返回</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>
+<th:block layout:fragment="scripts">
+    <script th:src="@{/js/jquery-1.8.3.min.js}"></script>
+    <script th:src="@{/assets/toastr-master/toastr.js}"></script>
+    <script th:src="@{/js/lib/Validform_v5.3.2/Validform_v5.3.2.js}"></script>
+    <script th:inline="javascript">
+        function save() {
+            var jobClass = $("#jobClass").val() || '';
+            var cron = $("#cron").val() || '';
+            if (jobClass === '' || cron === '') {
+                toastr.error("请输入完整的信息！");
+                return false;
+            }
+            $("#scheduleForm").submit();
+        }
+    </script>
+</th:block>
+</body>
+</html>

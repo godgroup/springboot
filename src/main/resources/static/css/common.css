@@ -1,0 +1,453 @@
+/* ==========================================================================
+   Custom reset styles
+   ========================================================================== */
+textarea {
+    resize: none;
+}
+
+.pagination {
+    margin: 0;
+}
+
+.search, .search:focus {
+    margin-top: 0;
+    width: 180px;
+    border: 1px solid #eaeaea;
+    box-shadow: none;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    color: #c8c8c8;
+    font-weight: 300;
+}
+
+.dropdown-menu li .dropdown-item {
+    display: block;
+    padding: 10px 15px 0;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+.profile-nav ul > li {
+    overflow: hidden;
+}
+
+.form-horizontal .checkbox, .form-horizontal .checkbox-inline, .form-horizontal .radio, .form-horizontal .radio-inline {
+    margin-right: 10px;
+    vertical-align: 1px;
+}
+
+[id $= 'donut'] {
+    height: 150px;
+}
+
+.graph-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/*.graph{ width: 250px;}*/
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+.m10 {
+    margin: 10px;
+}
+
+.m20 {
+    margin: 20px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.ml15 {
+    margin-left: 15px;
+}
+
+.mr15 {
+    margin-right: 15px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.p10 {
+    padding: 10px;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.pl15 {
+    padding-left: 15px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.expand-icon {
+    width: 39px;
+}
+
+.lh34 {
+    line-height: 34px;
+}
+
+.fix-right {
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+
+.tac {
+    text-align: center;
+}
+
+/* ==========================================================================
+   Components Styles
+   ========================================================================== */
+/*Toast Begin*/
+.alert-toast {
+    width: 300px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    margin-left: -150px;
+    padding: 20px;
+    border: none;
+    color: white;
+    background-color: #000;
+}
+
+/*Toast End*/
+
+.select-terminal .full-width .dropdown-menu {
+    width: 100%;
+}
+
+.select-terminal .full-width ul li a {
+    padding: 10px 13px;
+}
+
+[data-role="switch-state"] .selected {
+    color: #FF6C60;
+}
+
+.piece-title {
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.piece-body {
+    padding: 10px 0;
+}
+
+/*state overview*/
+
+.state-overview .symbol, .state-overview .value {
+    display: inline-block;
+    text-align: center;
+}
+
+.state-overview .value {
+    float: right;
+
+}
+
+.state-overview .value h1, .state-overview .value p {
+    margin: 0;
+    padding: 0;
+    color: #c6cad6;
+}
+
+.state-overview .value h1 {
+    font-weight: 300;
+}
+
+.state-overview .symbol i {
+    color: #fff;
+    font-size: 50px;
+}
+
+.state-overview .symbol {
+    width: 40%;
+    padding: 25px 15px;
+    -webkit-border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.state-overview .value {
+    width: 58%;
+    padding-top: 21px;
+}
+
+.state-overview .terques {
+    background: #6ccac9;
+}
+
+.state-overview .red {
+    background: #ff6c60;
+}
+
+.state-overview .yellow {
+    background: #f8d347;
+}
+
+.state-overview .blue {
+    background: #57c8f2;
+}
+
+/* wx_phone_preview_wrp */
+.wx_phone_preview .panel {
+    position: absolute;
+    z-index: 10000;
+    left: 15px;
+    right: 15px;
+    top: 50%;
+    margin-top: -130px;
+    box-sizing: content-box;
+}
+
+.wx_phone_preview .panel-body {
+    height: 200px;
+}
+
+.wx_phone_preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -365px;
+    margin-left: -180px;
+    z-index: 9997;
+    width: 360px;
+    height: 680px;
+    background: url("../img/wx_phone_preview.png") 0 0 no-repeat;
+}
+
+.btn_phone_preview_closed {
+    position: absolute;
+    left: -138px;
+    bottom: 90px;
+}
+
+.btn_phone_preview_closed, .btn_wx_phone_preview {
+    padding: 0;
+    min-width: 120px;
+}
+
+.wx_phone {
+    padding: 84px 56px 0 17px;
+}
+
+.wx_phone_hd {
+    text-align: center;
+    color: #fff;
+    line-height: 38px;
+    height: 38px;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    padding: 0 20px;
+}
+
+.wx_phone_bd {
+    position: relative;
+    overflow: auto;
+    background-color: #fff;
+    height: 508px;
+}
+
+.wx_phone_preview_appmsg {
+    padding: 15px 10px;
+}
+
+.appmsg_wap .rich_media_title {
+    margin-bottom: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.appmsg_wap .rich_media_meta_list {
+    margin-bottom: 18px;
+    line-height: 20px;
+    font-size: 0;
+}
+
+.appmsg_wap .rich_media_meta {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.appmsg_wap .rich_media_meta_text {
+    color: #8c8c8c;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.appmsg_wap .rich_media_meta_link {
+    color: #607fa6;
+    cursor: pointer;
+}
+
+.appmsg_wap .rich_media_content {
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    color: #3e3e3e;
+}
+
+.appmsg_wap .rich_media_content * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    word-wrap: break-word !important;
+}
+
+.appmsg_wap .rich_media_content p {
+    clear: both;
+    min-height: 1em;
+    white-space: pre-wrap;
+}
+
+.wx_phone_preview .btn {
+    display: inline-block;
+    overflow: visible;
+    padding: 0 22px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font-size: 14px;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    min-width: 60px;
+}
+
+.wx_phone_preview .btn_default {
+    background-color: #fff;
+    border-color: #e7e7eb;
+    color: #222;
+    opacity: 1;
+}
+
+.wx_phone_preview .btn_phone_preview_closed {
+    position: absolute;
+    left: -138px;
+    bottom: 90px;
+}
+
+.wx_phone_preview .btn_phone_preview_closed, .wx_phone_preview .btn_wx_phone_preview {
+    padding: 0;
+    min-width: 120px;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=75);
+    -moz-opacity: .75;
+    -khtml-opacity: .75;
+    opacity: .75;
+    background-color: #000;
+    z-index: 9998;
+}
+
+.wx_phone_preview_wrp .mask {
+    z-index: 9995;
+}
+
+.wx_phone_bd .mask {
+    position: absolute;
+}
+
+/* ==========================================================================
+   Page Styles
+   ========================================================================== */
+
+/*User Detail Page Begin*/
+.user-detail-top {
+    position: relative;
+}
+
+.user-detail-top .btn-primary {
+    position: absolute;
+    left: 145px;
+    bottom: 30px;
+    font-size: 12px;
+}
+
+/*User Detail Page End*/
+
+@media only screen and (max-width: 1200px) {
+    /* .btn           { margin-bottom: 5px;} */
+    .sm-mb5 {
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+
+}
+
+table.table thead .sorted:after {
+    display: inline-block;
+    font-family: 'FontAwesome';
+    opacity: 0.8;
+    margin-left: 1em;
+}
+
+table.table thead .sorted.sorted-desc:after {
+    content: "\25BC";
+}
+
+table.table thead .sorted.sorted-asc:after {
+    content: "\25B2";
+}

@@ -1,13 +1,18 @@
 package com.hl.bootssm;
 
 import com.hl.bootssm.config.DBConfig;
+import com.hl.bootssm.config.ThymeleafConfig;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.MessageSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration;
 import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
+import org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.*;
 import org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration;
+import org.springframework.boot.devtools.autoconfigure.DevToolsDataSourceAutoConfiguration;
+import org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -28,10 +33,15 @@ import org.springframework.scheduling.annotation.EnableAsync;
         MultipartAutoConfiguration.class,
         ServerPropertiesAutoConfiguration.class,
         PropertyPlaceholderAutoConfiguration.class,
+        ThymeleafAutoConfiguration.class,
+        ThymeleafConfig.class,
         WebMvcAutoConfiguration.class,
         WebSocketAutoConfiguration.class,
         WebMvcAutoConfiguration.class,
         WebSocketAutoConfiguration.class,
+        LocalDevToolsAutoConfiguration.class,
+        DevToolsDataSourceAutoConfiguration.class,
+        MessageSourceAutoConfiguration.class,
         DBConfig.class
 })
 @EnableAutoConfiguration
