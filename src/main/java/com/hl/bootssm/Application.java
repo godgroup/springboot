@@ -1,6 +1,7 @@
 package com.hl.bootssm;
 
 import com.hl.bootssm.config.DBConfig;
+import com.hl.bootssm.config.RabbitMQConfig;
 import com.hl.bootssm.config.ThymeleafConfig;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -42,7 +43,8 @@ import org.springframework.scheduling.annotation.EnableAsync;
         LocalDevToolsAutoConfiguration.class,
         DevToolsDataSourceAutoConfiguration.class,
         MessageSourceAutoConfiguration.class,
-        DBConfig.class
+        DBConfig.class,
+        RabbitMQConfig.class
 })
 @EnableAutoConfiguration
 @EnableSpringDataWebSupport
