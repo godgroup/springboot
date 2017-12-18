@@ -1,9 +1,6 @@
 package com.hl.bootssm.config;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.Queue;
-import org.springframework.amqp.core.TopicExchange;
+import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -34,6 +31,26 @@ public class RabbitMQConfig {
     }
 
     /**
+     * 直接交换
+     *
+     * @return
+     */
+    @Bean
+    public DirectExchange directExchange() {
+        return new DirectExchange("directExchange");
+    }
+
+    /**
+     * 不限制交换
+     *
+     * @return
+     */
+    @Bean
+    public FanoutExchange fanoutExchange() {
+        return new FanoutExchange("fanoutExchange");
+    }
+
+    /**
      * 绑定
      *
      * @return
@@ -46,5 +63,10 @@ public class RabbitMQConfig {
     @Bean
     public Binding binding2() {
         return BindingBuilder.bind(queue2()).to(topicExchange()).with("key.#");
+    }
+
+    @Bean
+    public Binding binding3() {
+        return null;
     }
 }

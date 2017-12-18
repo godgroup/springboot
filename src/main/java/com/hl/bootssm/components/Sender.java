@@ -16,6 +16,9 @@ import java.util.UUID;
  */
 @Component
 public class Sender implements RabbitTemplate.ConfirmCallback, RabbitTemplate.ReturnCallback {
+    /**
+     * 发送消息对象
+     */
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
@@ -48,7 +51,11 @@ public class Sender implements RabbitTemplate.ConfirmCallback, RabbitTemplate.Re
         CorrelationData correlationId = new CorrelationData(UUID.randomUUID().toString());
 
         System.out.println("开始发送消息 : " + msg.toLowerCase());
-        String response = rabbitTemplate.convertSendAndReceive("topicExchange", "key.1", msg, correlationId).toString();
+        Object response = rabbitTemplate.convertSendAndReceive("topicExchange", "key.1", msg, correlationId);
+        if (response == null) {
+            System.out.println("消费者响应未响应...");
+            return;
+        }
         System.out.println("结束发送消息 : " + msg.toLowerCase());
         System.out.println("消费者响应 : " + response + " 消息处理完成");
     }
